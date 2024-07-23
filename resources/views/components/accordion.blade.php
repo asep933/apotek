@@ -1,4 +1,4 @@
-<div id="accordion-open" data-accordion="open">
+<div id="accordion-open" class="max-w-screen-xl mx-auto" data-accordion="open">
     <h2 id="accordion-open-heading-1">
         <button
             type="button"

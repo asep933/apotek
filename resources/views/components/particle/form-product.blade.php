@@ -7,7 +7,7 @@
 
 <form
     action="{{ $action }}"
-    class="max-w-sm mx-auto capitalize pt-32 pb-16"
+    class="max-w-sm mx-auto capitalize pt-32 pb-16 dark:bg-gray-900 dark:text-white"
     enctype="multipart/form-data"
     method="POST"
 >

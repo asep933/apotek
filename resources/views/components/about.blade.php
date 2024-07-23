@@ -1,7 +1,10 @@
-<div id="about" class="relative bg-white overflow-hidden text-base">
+<div
+    id="about"
+    class="relative dark:bg-gray-900 dark:text-white bg-white overflow-hidden text-base my-20"
+>
     <div class="max-w-7xl mx-auto">
         <div
-            class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"
+            class="relative z-10 pb-8 dark:bg-gray-900 dark:text-white bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"
         >
             <svg
                 class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
@@ -20,12 +23,12 @@
             >
                 <div class="sm:text-center lg:text-left">
                     <h2
-                        class="my-6 text-2xl tracking-tight font-extrabold text-gray-900 sm:text-3xl md:text-4xl"
+                        class="my-6 text-2xl tracking-tight dark:text-white font-extrabold text-gray-900 sm:text-3xl md:text-4xl"
                     >
                         Tentang Kami
                     </h2>
 
-                    <p class="text-gray-900">
+                    <p class="text-gray-900 dark:text-white dark:pr-8">
                         Selamat datang di Apotek Sehat Sentosa, didirikan pada
                         tahun 2010. Kami berkomitmen untuk menyediakan produk
                         farmasi dan kesehatan berkualitas tinggi kepada
@@ -40,11 +43,9 @@
             </main>
         </div>
     </div>
-    <div
-        class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-gray-400 bg-blend-multiply"
-    >
+    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-blend-multiply">
         <img
-            class="h-56 w-full object-cover object-top sm:h-72 md:h-96 lg:w-full lg:h-full"
+            class="h-56 w-full object-cover object-top max-w-screen-xl sm:h-72 md:h-96 lg:w-full lg:h-full"
             src="/model.jpeg"
             alt="model picture"
         />

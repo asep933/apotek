@@ -1,13 +1,13 @@
 <x-layout>
-    <div id="hero" class="pt-16 h-full">
+    <div id="hero" class="h-full">
         <x-hero-dashboard />
     </div>
 
     <x-statistic />
     <x-about />
 
-    <div class="px-16 py-16 space-y-10">
-        <div class="flex justify-between items-center">
+    <div class="px-16 py-16 space-y-10 dark:bg-gray-900 dark:text-white">
+        <div class="flex justify-between items-center max-w-screen-xl mx-auto">
             <h1 class="text-4xl font-extrabold">Sampel Product</h1>
             <a
                 href="/products"
@@ -19,7 +19,7 @@
         <x-products-list :products="$products" />
     </div>
 
-    <div class="px-4 lg:px-16 py-6">
+    <div class="px-4 lg:px-16 py-6 dark:bg-gray-900 dark:text-white">
         <x-accordion />
     </div>
 </x-layout>

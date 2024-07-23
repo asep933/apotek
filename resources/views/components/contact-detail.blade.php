@@ -1,11 +1,11 @@
-<div class="relative isolate bg-white">
+<div class="relative isolate bg-white dark:bg-gray-900 dark:text-white">
     <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div
             class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-32"
         >
             <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
                 <div
-                    class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-fourth ring-1 ring-gray-900/10 lg:w-1/2"
+                    class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden dark:bg-gray-900 dark:text-white bg-fourth ring-1 ring-gray-900/10 lg:w-1/2"
                 >
                     <svg
                         class="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -50,10 +50,12 @@
                         ></rect>
                     </svg>
                 </div>
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900">
+                <h2
+                    class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
                     Kontak kami
                 </h2>
-                <p class="mt-6 text-lg leading-8 text-gray-600">
+                <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-white">
                     Jangan ragu untuk menghubungi kami jika ada pertanyaan atau
                     bantuan. Kami di sini untuk membantu!
                 </p>
@@ -79,14 +81,14 @@
                         </dt>
                         <dd>
                             <a
-                                class="hover:text-gray-900"
+                                class="hover:text-gray-900 dark:text-white"
                                 href="mailto:contact@yourcompany.com"
                             >
                                 contact@yourcompany.com
                             </a>
                         </dd>
                     </div>
-                    <div class="flex gap-x-4">
+                    <div class="flex gap-x-4 dark:text-white">
                         <dt class="flex-none">
                             <span class="sr-only">Address</span>
                             <svg
@@ -116,7 +118,7 @@
                     <div>
                         <label
                             for="first-name"
-                            class="block text-sm font-semibold leading-6 text-gray-900"
+                            class="block text-sm font-semibold dark:text-white leading-6 text-gray-900"
                         >
                             First name
                         </label>
@@ -133,7 +135,7 @@
                     <div>
                         <label
                             for="last-name"
-                            class="block text-sm font-semibold leading-6 text-gray-900"
+                            class="block text-sm font-semibold dark:text-white leading-6 text-gray-900"
                         >
                             Last name
                         </label>
@@ -150,7 +152,7 @@
                     <div class="sm:col-span-2">
                         <label
                             for="email"
-                            class="block text-sm font-semibold leading-6 text-gray-900"
+                            class="block text-sm font-semibold dark:text-white leading-6 text-gray-900"
                         >
                             Email
                         </label>
@@ -167,7 +169,7 @@
                     <div class="sm:col-span-2">
                         <label
                             for="message"
-                            class="block text-sm font-semibold leading-6 text-gray-900"
+                            class="block text-sm font-semibold dark:text-white leading-6 text-gray-900"
                         >
                             Message
                         </label>
@@ -184,7 +186,7 @@
                 <div class="mt-8 flex justify-end">
                     <button
                         type="submit"
-                        class="w-max rounded-2xl border-2 border-[#0057ff] bg-[#0057ff] px-5 py-1.5 text-sm font-semibold text-white transition-colors duration-150 ease-in-out hover:border-blue-400 hover:bg-blue-400"
+                        class="w-max rounded-2xl border-2 dark:text-white border-[#0057ff] bg-[#0057ff] px-5 py-1.5 text-sm font-semibold text-white transition-colors duration-150 ease-in-out hover:border-blue-400 hover:bg-blue-400"
                     >
                         Send message
                     </button>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark:bg-gray-900">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,10 +14,26 @@
         </style>
     </head>
     <body>
-        <x-navbar />
+        <div class="z-50" id="navbar">
+            <x-navbar />
+        </div>
         {{ $slot }}
         <x-footer />
 
+        <script>
+            const navbar = document.querySelector('#navbar');
+
+            const handleScroll = (e) => {
+                if (document.documentElement.scrollTop >= 380) {
+                    navbar.classList.add('sticky');
+                } else {
+                    navbar.classList.remove('sticky');
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll();
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script type="module">
             import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
@@ -29,6 +45,8 @@
                     pagination: {
                         el: '.swiper-pagination',
                     },
+
+                    autoplay: true,
 
                     navigation: {
                         nextEl: '.swiper-button-next',

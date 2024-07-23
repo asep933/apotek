@@ -51,12 +51,10 @@ class ProductsControllers extends Controller
 
         return redirect()->intended('/admin')->with('message', 'success added product!');
     }
-
     public function show(Product $product)
     {
         return view('edit-product', ['product' => $product]);
     }
-
     public function update(Request $request, Product $product): RedirectResponse
     {
         $validator = Validator::make($request->all(), [
@@ -86,7 +84,6 @@ class ProductsControllers extends Controller
 
         return redirect()->intended('/admin')->with('message', 'successfully updated product');
     }
-
     public function admin() {
         $products = Product::simplePaginate(7);
 
@@ -97,7 +94,6 @@ class ProductsControllers extends Controller
 
         return view('search', ['products' => $products]);
     }
-
     public function destroy(Product $product)
     {
         $product->delete();

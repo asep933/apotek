@@ -1,11 +1,10 @@
 @props([
-    "path",
     "title",
     "description",
 ])
 
 <div
-    class="bg-{{ $path }} bg-cover bg-top bg-no-repeat bg-gray-400 bg-blend-multiply"
+    class="bg-[url('/public/bg-1.jpeg')] bg-cover bg-top bg-no-repeat bg-gray-400 bg-blend-multiply"
 >
     <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
         <h1

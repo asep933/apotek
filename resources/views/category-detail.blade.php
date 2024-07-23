@@ -1,6 +1,6 @@
 <x-layout>
     <div class="pt-32 pb-16 capitalize space-y-5">
-        <h1 class="font-bold text-2xl px-16">
+        <h1 class="font-bold text-2xl px-16 max-w-screen-xl mx-auto">
             Category {{ $categories->title }}:
         </h1>
 

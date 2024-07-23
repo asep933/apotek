@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="px-4 py-16 lg:px-16 lg:py-32 space-y-5">
+    <div class="px-4 py-24 lg:px-16 lg:py-32 space-y-5">
         <h1 class="text-3xl font-bold">Hasil pencarian:</h1>
 
         @if ($products->isEmpty())

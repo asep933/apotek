@@ -1,5 +1,5 @@
 <!-- drawer init and show -->
-<div class="text-start">
+<div class="text-start max-w-screen-xl mx-auto">
     <button
         class="text-white bg-third hover:bg-opacity-85 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
         type="button"
@@ -14,7 +14,7 @@
 <!-- drawer component -->
 <div
     id="drawer-navigation"
-    class="fixed top-0 left-0 z-40 pt-32 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-gray-800"
+    class="fixed top-0 left-0 z-40 pt-32 h-screen p-4 dark:bg-gray-900 dark:text-white overflow-y-auto transition-transform -translate-x-full bg-white w-64"
     tabindex="-1"
     aria-labelledby="drawer-navigation-label"
 >

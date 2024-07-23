@@ -1,5 +1,7 @@
+<x-particle.progress />
+
 <nav
-    class="bg-white z-50 dark:bg-gray-900 fixed w-full top-0 start-0 border-b border-gray-200 dark:border-gray-600"
+    class="bg-white z-50 dark:bg-gray-900 w-full start-0 border-b border-gray-200 dark:border-gray-600"
 >
     <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto"
@@ -74,7 +76,11 @@
                         class="block py-2 px-3 text-black rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                         aria-current="page"
                     >
-                        <span class="text-black hover:text-third">Home</span>
+                        <span
+                            class="text-black hover:border-b-2 border-third dark:hover:text-third dark:text-fourth"
+                        >
+                            Home
+                        </span>
                     </a>
                 </li>
                 <li>
@@ -82,7 +88,11 @@
                         href="{{ route("about") }}"
                         class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                     >
-                        <span class="text-black hover:text-third">About</span>
+                        <span
+                            class="text-black hover:border-b-2 border-third dark:hover:text-third dark:text-fourth"
+                        >
+                            About
+                        </span>
                     </a>
                 </li>
                 <li>
@@ -90,7 +100,7 @@
                         id="dropdownHoverButton"
                         data-dropdown-toggle="dropdownHover"
                         data-dropdown-trigger="hover"
-                        class="text-black px-3 lg:px-0 hover:text-third focus:outline-none font-medium text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        class="text-black px-3 lg:px-0 dark:hover:text-third dark:text-fourth font-medium text-center inline-flex items-center"
                         type="button"
                     >
                         Browse
@@ -149,7 +159,9 @@
                                         </svg>
                                     </summary>
 
-                                    <article class="px-4 pb-4 bg-fourth">
+                                    <article
+                                        class="px-4 pb-4 bg-fourth dark:hover:text-third dark:text-fourth dark:bg-gray-900"
+                                    >
                                         <ul
                                             class="flex flex-col gap-1 pl-2 pt-2"
                                         >
@@ -215,7 +227,11 @@
                         href="{{ route("contact") }}"
                         class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                     >
-                        <span class="text-black hover:text-third">Contact</span>
+                        <span
+                            class="text-black hover:border-b-2 border-third dark:hover:text-third dark:text-fourth"
+                        >
+                            Contact
+                        </span>
                     </a>
                 </li>
             </ul>
