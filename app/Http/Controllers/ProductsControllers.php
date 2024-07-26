@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use DOMDocument;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
@@ -12,10 +14,34 @@ class ProductsControllers extends Controller
 {
     public function index() {
         $products = Product::with('category')->simplePaginate(7);
+        $BASE_API=env('BLOGGER_BASE_API');
+        $KEY=env('BLOGER_KEY');
 
-        return view('dashboard', [
-            'products' => $products
-        ]);
+        $posts = Http::get("$BASE_API/blogs/6672745013525518155/posts?key=$KEY")->object();
+        $postsSlice = array_slice($posts->items, 0,3);
+        $dom = new DOMDocument;
+        $lists = [];
+
+        foreach($postsSlice as $content) {
+            @$dom->loadHTML($content->content);
+            $image = $dom->getElementsByTagName('img');
+            
+            $list = [
+              'id' => $content->id,
+              'title' => $content->title,
+              'content' => $content->content,
+              'published' => $content->published,
+              'author' => $content->author,
+            ];
+    
+            foreach($image as $img) {
+              $list['image_url'] = $img->getAttribute('src');
+            } 
+    
+            $lists[] = $list;
+          }
+        
+        return view('dashboard', compact('products', 'lists'));
     }
     public function products() {
         $products = Product::simplePaginate(7);
@@ -101,5 +127,9 @@ class ProductsControllers extends Controller
         Storage::delete($product->image_url);
 
         return back()->with('message', 'successfuly delete product');
+    }
+    public function detail(Product $product)
+    {
+        return view('product-detail', compact('product'));
     }
 }

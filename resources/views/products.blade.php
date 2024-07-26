@@ -1,4 +1,5 @@
 <x-layout>
+    <div>{{ Breadcrumbs::render("product.list") }}</div>
     <div class="py-24 capitalize space-y-6">
         <h1 class="text-3xl font-bold px-16 max-w-screen-xl mx-auto">
             list all products

@@ -1,5 +1,5 @@
 <div class="swiper max-w-screen-2xl">
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper" id="carousel">
         {{ $slot }}
     </div>
 

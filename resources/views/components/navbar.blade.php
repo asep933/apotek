@@ -6,7 +6,10 @@
     <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto"
     >
-        <a href="/" class="flex items-center rtl:space-x-reverse">
+        <a
+            href="{{ route("dashboard") }}"
+            class="flex items-center rtl:space-x-reverse"
+        >
             <img src="/logo-apotek.jpeg" class="h-20" alt="Apotek Logo" />
         </a>
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -72,7 +75,7 @@
             >
                 <li>
                     <a
-                        href="/"
+                        href="{{ route("dashboard") }}"
                         class="block py-2 px-3 text-black rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                         aria-current="page"
                     >
@@ -105,6 +108,7 @@
                     >
                         Browse
                         <svg
+                            id="arrow"
                             class="w-2.5 h-2.5 ms-3"
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
@@ -205,6 +209,14 @@
                                     </article>
                                 </details>
                             </li>
+                            <li>
+                                <a
+                                    href="{{ route("article.list") }}"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >
+                                    Article
+                                </a>
+                            </li>
                             @auth
                                 <li>
                                     <a
@@ -239,7 +251,7 @@
     </div>
 </nav>
 
-<div class="mt-20 px-4 lg:px-16 fixed z-[999] w-full">
+<div class="mt-4 px-4 lg:px-16 fixed z-[999] w-full">
     @if (session("message"))
         <x-particle.alert.success :message="session('message')" />
     @endif
@@ -254,6 +266,7 @@
 <script>
     const signIn = document.querySelector('#sign-in');
     const signUp = document.querySelector('#sign-up');
+    const arrow = document.querySelector('#arrow');
     const path = window.location.pathname;
 
     switch (path) {

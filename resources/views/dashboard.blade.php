@@ -22,4 +22,8 @@
     <div class="px-4 lg:px-16 py-6 dark:bg-gray-900 dark:text-white">
         <x-accordion />
     </div>
+
+    <div>
+        <x-particle.card-article :posts="$lists" />
+    </div>
 </x-layout>

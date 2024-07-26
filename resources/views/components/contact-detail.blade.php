@@ -186,7 +186,7 @@
                 <div class="mt-8 flex justify-end">
                     <button
                         type="submit"
-                        class="w-max rounded-2xl border-2 dark:text-white border-[#0057ff] bg-[#0057ff] px-5 py-1.5 text-sm font-semibold text-white transition-colors duration-150 ease-in-out hover:border-blue-400 hover:bg-blue-400"
+                        class="w-max rounded-2xl border-2 dark:text-white bg-third px-5 py-1.5 text-sm font-semibold text-white transition-colors duration-150 ease-in-out hover:border-secondary hover:bg-secondary"
                     >
                         Send message
                     </button>

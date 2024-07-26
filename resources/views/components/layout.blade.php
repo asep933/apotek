@@ -46,6 +46,7 @@
                         el: '.swiper-pagination',
                     },
 
+                    grabCursor: true,
                     autoplay: true,
 
                     navigation: {

@@ -1,4 +1,5 @@
 @props([
+    "product" => false,
     "title",
     "description",
     "image",
@@ -8,18 +9,22 @@
 <div
     class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
 >
-    <img
-        class="rounded-t-lg h-44"
-        src="{{ asset($image) }}"
-        alt="{{ $title }}"
-    />
+    <a href="{{ route("product.detail", $product) }}">
+        <img
+            class="rounded-t-lg h-44"
+            src="{{ asset($image) }}"
+            alt="{{ $title }}"
+        />
+    </a>
 
     <div class="p-5">
-        <h5
-            class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-        >
-            {{ $title }}
-        </h5>
+        <a href="{{ route("product.detail", $product) }}">
+            <h5
+                class="text-2xl hover:underline font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+                {{ $title }}
+            </h5>
+        </a>
 
         <form action="{{ route("category", $category) }}" method="get">
             <button type="submit" class="hover:underline">
@@ -34,7 +39,7 @@
             {{ Str::limit($description, 150) }}
         </p>
         <a
-            href="https://wa.me/085872256552"
+            href="{{ env("LINK_WHATSAPP") }}"
             target="_blank"
             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-third rounded-lg hover:bg-opacity-85 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
