@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <div class="px-8 pb-16">
+    <div class="px-8 pb-16 container mx-auto">
         <x-comments :comments="$comments" :postId="$postId" />
     </div>
 </div>

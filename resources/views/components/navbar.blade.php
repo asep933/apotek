@@ -217,7 +217,7 @@
                                     Article
                                 </a>
                             </li>
-                            @auth
+                            @if (auth()->check() && auth()->user()->role->title === "admin")
                                 <li>
                                     <a
                                         href="{{ route("admin") }}"
@@ -226,7 +226,7 @@
                                         Admin
                                     </a>
                                 </li>
-                            @endauth
+                            @endif
 
                             <li class="px-2">
                                 <x-particle.search />

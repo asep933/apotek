@@ -103,7 +103,7 @@ class ProductsControllers extends Controller
 
         $product->category_id = $request['category_id'];
         $product->title = $request['title'];
-        $product->description =  $request['description'];
+        $product->description = $request['description'];
         $product->image_url = $path;
 
         $product->save();

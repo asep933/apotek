@@ -64,7 +64,7 @@
         <div class="w-full flex justify-end px-3">
             <input
                 type="submit"
-                class="px-2.5 py-1.5 rounded-md text-white text-sm bg-third"
+                class="px-2.5 py-1.5 rounded-md cursor-pointer text-white text-sm bg-third"
                 value="Post Comment"
             />
         </div>

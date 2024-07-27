@@ -1,5 +1,5 @@
-<div id="statistic" class="dark:bg-gray-900 lg:pt-12">
-    <div class="pt-12 bg-fourth dark:bg-gray-900 sm:pt-20">
+<div id="statistic" class="dark:bg-gray-900">
+    <div class="pt-16 bg-fourth dark:bg-gray-900 sm:pt-20">
         <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center">
                 <h2

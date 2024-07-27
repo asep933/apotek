@@ -38,6 +38,10 @@ Breadcrumbs::for('sign-in', function (BreadcrumbTrail $trail) {
     $trail->parent('home');
     $trail->push('sign-in', route('sign-in'));
 });
+Breadcrumbs::for('sign-up', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push('sign-up', route('sign-up'));
+});
 Breadcrumbs::for('admin', function (BreadcrumbTrail $trail) {
     $trail->parent('home');
     $trail->push('admin', route('admin'));
