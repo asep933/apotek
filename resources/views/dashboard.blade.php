@@ -23,7 +23,11 @@
         <x-accordion />
     </div>
 
-    <div>
-        <x-particle.card-article :posts="$lists" />
+    <x-particle.card-article :posts="$lists" />
+
+    <div class="py-8 space-y-8 px-4 container mx-auto lg:px-16">
+        <h1 class="text-3xl font-extrabold">Testimonials</h1>
+        <x-testimonials :testimonials="$testimonials" />
+        <x-particle.form-testimonial />
     </div>
 </x-layout>

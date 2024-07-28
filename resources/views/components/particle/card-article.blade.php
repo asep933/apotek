@@ -1,4 +1,4 @@
-<div class="relative bg-gray-50 px-6 pt-16 pb-20 lg:px-8 lg:pt-8 lg:pb-28">
+<div class="relative bg-gray-50 px-6 pt-16 pb-20 lg:px-16 lg:pt-8 lg:pb-28">
     <div class="absolute inset-0">
         <div class="h-1/3 bg-white sm:h-2/3"></div>
     </div>

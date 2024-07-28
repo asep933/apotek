@@ -4,6 +4,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductsControllers;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/about', function() {
@@ -73,4 +74,8 @@ Route::controller(ArticleController::class)->group(function() {
     Route::get('/article', 'index')->name('article.list');
     Route::get('/article-detail/{id}', 'show')->name('article.detail');
     Route::delete('/delete-comment/{commentId}/{postId}', 'deleteComment')->name('delete.comment');
+});
+
+Route::controller(TestimonialController::class)->group(function() {
+    Route::post('/post-testimonial', 'store')->name('store.testimonial');
 });

@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\Role;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use App\Models\Testimonial;
 
 class User extends Authenticatable
 {
@@ -53,5 +55,10 @@ class User extends Authenticatable
     public function role(): BelongsTo
     {
         return $this->belongsTo(Role::class);
+    }
+
+    public function testimonial(): HasMany
+    {
+        return $this->hasMany(Testimonial::class);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Testimonial;
 use DOMDocument;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Http;
@@ -14,6 +15,7 @@ class ProductsControllers extends Controller
 {
     public function index() {
         $products = Product::with('category')->simplePaginate(7);
+        $testimonials = Testimonial::all();
         $BASE_API=env('BLOGGER_BASE_API');
         $KEY=env('BLOGER_KEY');
 
@@ -41,7 +43,7 @@ class ProductsControllers extends Controller
             $lists[] = $list;
           }
         
-        return view('dashboard', compact('products', 'lists'));
+        return view('dashboard', compact('products', 'lists', 'testimonials'));
     }
     public function products() {
         $products = Product::simplePaginate(7);

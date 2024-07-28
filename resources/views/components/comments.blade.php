@@ -31,7 +31,7 @@
                                 {{ $comment->author->displayName }}
                             </p>
 
-                            @auth
+                            @if(auth()->check() && auth()->user()->role->title === "admin")
                                 <form
                                     method="POST"
                                     action="{{ route("delete.comment", [$comment->id, $postId]) }}"
@@ -45,7 +45,7 @@
                                         delete
                                     </button>
                                 </form>
-                            @endauth
+                            @endif
                         </div>
                     @endif
                 @endforeach

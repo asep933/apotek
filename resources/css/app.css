@@ -10,7 +10,7 @@
 
 .swiper {
     width: 100%;
-    @apply h-screen;
+    @apply h-full;
 }
 
 .swiper-button-prev,

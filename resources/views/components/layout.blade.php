@@ -35,30 +35,5 @@
             handleScroll();
         </script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script type="module">
-            import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
-            document.addEventListener('DOMContentLoaded', function () {
-                const swiper = new Swiper('.swiper', {
-                    direction: 'horizontal',
-                    loop: true,
-
-                    pagination: {
-                        el: '.swiper-pagination',
-                    },
-
-                    grabCursor: true,
-                    autoplay: true,
-
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-
-                    scrollbar: {
-                        el: '.swiper-scrollbar',
-                    },
-                });
-            });
-        </script>
     </body>
 </html>
