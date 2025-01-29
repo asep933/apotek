@@ -1,30 +1,62 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Apotek
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Pharmacy Website is a Laravel-based web application that showcases various medicines on the homepage, managed through an admin panel.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects.
+- **Medicine Management**: Add, edit, and remove medicines from the admin panel.
+- **Responsive Design**: Optimized for desktop and mobile devices.
+- **Image Uploads**: Upload and display medicine images on the homepage.
+- **User Authentication**: Secure login and admin access.
+- **Search and Filtering**: Easily find medicines by name or category.
+- **SEO Friendly**: Optimized for search engines to attract visitors.
 
-### Installation
+## Installation
 
-set up according to the needs .env
+### Requirements
+Ensure your system meets the following requirements:
+- PHP >= 8.0
+- Composer
+- MySQL or PostgreSQL
+- Node.js & NPM (for frontend assets)
 
-```bash 
-git clone <this repo>
-cd /apotek
-composer install
-php artisan storage:link
-php artisan migrate:fresh --seed
-```
-and then running the website and vite
+### Setup Guide
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/asep933/apotek.git
+   cd pharmacy-website
+   ```
+2. Install dependencies:
+   ```sh
+   composer install
+   npm install && npm run dev
+   ```
+3. Create a `.env` file:
+   ```sh
+   cp .env.example .env
+   ```
+4. Configure the database in the `.env` file.
+5. Generate the application key:
+   ```sh
+   php artisan key:generate
+   ```
+6. Run migrations and seed the database:
+   ```sh
+   php artisan migrate --seed
+   ```
+7. Start the development server:
+   ```sh
+   php artisan serve
+   ```
 
-```bash
-php artisan serve
-npm run dev
-```
+## Usage
+After installation, access the application at `http://localhost:8000`. Log in as an admin to manage the displayed medicines.
+
+## Deployment
+For production deployment:
+- Configure `.env` with production settings.
+- Run `php artisan config:cache` for optimized performance.
+- Set up a queue worker for background tasks if necessary.
+
+## License
+This project is licensed under the MIT License. Feel free to use and modify it as needed.
